@@ -28,3 +28,19 @@ Ad esempio:
 - Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 - Le validazioni e i controlli possiamo farli anche in un secondo momento.
 ```
+
+---
+
+## STEPS
+
+1. Scrivo l'HTML come me lo immagino, con un bottone, un container e i quadrati al suo inteno;
+2. Stilizzo il tutto con CSS per avere un immagine
+azione migliore;
+3. Inizio a dare i primi comandi a JS;
+4. Mi prendo il bottone dall'HTML al JS;
+5. Creo un ciclo per generare i cubi all'interno del container;
+6. Al click del bottone si avvia il ciclo e si visualizzano;
+---
+7. Pensare a come aggiungere la funzionalità del click sulla cella che all'azione si colorerà di azzurro e contemporaneamente in *console* si visualizzerà il numero random corrispondente di quella cella;
+8. Creare una funzione che mi genera un numero random **SENZA RIPETIZIONI**;
+9. Aprire l'azione del click sulla cella e inserire la conseguenza: colorare la cella tramite l'agginta di una classe creata in CSS che modificherà il  background-color;
