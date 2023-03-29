@@ -19,11 +19,11 @@ main{
 }
 
 button{
-  margin: 2rem;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: darkgreen;
   color: white;
+  cursor: pointer;
 }
 
 .container{
@@ -46,4 +46,8 @@ button{
 
 .active{
   background-color:darkturquoise;
+}
+
+.hide{
+  display: none;
 }

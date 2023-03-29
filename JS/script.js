@@ -1,20 +1,33 @@
 //BOTTONI
 const btnGenera = document.getElementById("genera");
 
-//CONTAINER
-const container = document.querySelector(".container");
+//MAIN
+const main = document.getElementById("main");
 
-//ciclo per generare i box all'interno del container
-for (let i = 0; i < 100; i++){
-  const box = document.createElement("div");
-  box.className = "box";
-  container.appendChild(box);
-}
-
-
+//EVENTO bottone cliccato
 btnGenera.addEventListener("click", function(){
-  console.log("mi hai cliccato");
+  //creo il container
+  const container = document.createElement("div");
+  container.className = "container";
+  main.appendChild(container);
+
+  //ciclo per generare i box all'interno del container
+    for (let i = 0; i < 100; i++){
+    const box = document.createElement("div");
+    box.className = "box";
+    container.appendChild(box);
+  }
+
+  //elimino il bottone
+  btnGenera.className = "hide";
+
+
+  
+
 })
+
+
+
 
 
 
