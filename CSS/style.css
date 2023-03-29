@@ -18,18 +18,36 @@ body{
 main{
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: darkslateblue;
 }
 
-button{
+.btn{
   padding: 5px 10px;
+  margin: 2rem;
   border-radius: 5px;
-  background-color: darkgreen;
   color: white;
   cursor: pointer;
+
+}
+
+select{
+  background-color: darkblue;
+}
+
+option:nth-child(2){
+  background-color: green;
+}
+option:nth-child(3){
+  background-color: darkorange;
+}
+option:nth-child(4){
+  background-color: darkred;
+}
+
+button{
+  background-color: darkgreen;
 }
 
 .container{
@@ -44,7 +62,6 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: var(--easy);
   aspect-ratio: 1 / 1;
   border: 1px solid white;
   cursor: pointer;
@@ -52,7 +69,7 @@ button{
 }
 
 .active{
-  background-color:darkturquoise;
+  background: radial-gradient(darkturquoise, darkcyan);
 }
 
 .hide{

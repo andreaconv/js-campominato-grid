@@ -1,8 +1,9 @@
 //BOTTONI
-const btnGenera = document.getElementById("genera");
+const btnGenera = document.querySelector("button");
+const select = document.querySelector("select");
 
 //MAIN
-const main = document.getElementById("main");
+const main = document.querySelector("main");
 
 const blackList = [];
 
@@ -15,12 +16,20 @@ btnGenera.addEventListener("click", function(){
   main.appendChild(container);
 
   //ciclo per generare i box all'interno del container
-  for (let i = 1; i <= 100; i++){
+  for (let i = 1; i <= select.value; i++){
   const box = document.createElement("div");
   box.className = "box";
 
+  if(select.value == 100){
+  box.style = "width: var(--easy)";
+  }else if(select.value == 81){
+    box.style = "width: var(--medium)";
+  }else {
+    box.style = "width: var(--hard)";
+  }
+
   //creo un numero random
-  const numeroRandom = generateUniqueRandomNumber(blackList, 1, 100);
+  const numeroRandom = generateUniqueRandomNumber(blackList, 1, select.value);
   blackList.push(numeroRandom);
   box.innerText = numeroRandom;
 
@@ -38,8 +47,9 @@ btnGenera.addEventListener("click", function(){
   container.appendChild(box);
   }
 
-  //elimino il bottone
-  btnGenera.className = "hide";
+  //elimino il bottone e la select
+  btnGenera.classList = "hide";
+  select.classList = "hide";
 
 })
 
