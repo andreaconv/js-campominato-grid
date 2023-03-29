@@ -9,6 +9,12 @@ body{
   color: white;
 }
 
+:root{
+  --easy: calc(100% / 10);
+  --medium: calc(100% / 9);
+  --hard: calc(100% / 7)
+}
+
 main{
   height: 100vh;
   display: flex;
@@ -38,10 +44,11 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100% / 10);
+  width: var(--easy);
   aspect-ratio: 1 / 1;
   border: 1px solid white;
   cursor: pointer;
+  font-size: 0;
 }
 
 .active{

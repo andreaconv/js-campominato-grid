@@ -12,9 +12,21 @@ btnGenera.addEventListener("click", function(){
   main.appendChild(container);
 
   //ciclo per generare i box all'interno del container
-  for (let i = 0; i < 100; i++){
+  for (let i = 1; i <= 100; i++){
   const box = document.createElement("div");
   box.className = "box";
+
+  //EVENTO click sul BOX
+  box.addEventListener("click", function(){
+  //coloro la casella aggiungendo una classe
+  // FIXME:box.classList.add("active");
+  //con la proprità toggle aggiunge o rimuove una classe
+  box.classList.toggle("active")
+  console.log(box.innerText = i);
+
+  })
+
+
   container.appendChild(box);
   }
 
@@ -23,12 +35,7 @@ btnGenera.addEventListener("click", function(){
 })
 
 
-//PROBLEMA: il box non viene visto al di fuori dell ciclo 
-//EVENTO click sulla casella
-box.addEventListener("click", function(){
-  //coloro la casella aggiungendo una classe
-  box.className = "active"
-})
+
 
 
 //-------------------------FUNCTIONS-----------------------------------
@@ -36,6 +43,7 @@ box.addEventListener("click", function(){
 function createDiv (){
   //credo sia meglio creare una funzione che crea il div e me lo inserisce nell'html dato che eseguo questa azione più di una volta;
 }
+
 
 
 
